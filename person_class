@@ -1,0 +1,54 @@
+class person:
+    def __init__(self,name,age,address):
+        self.name=name
+        self.age=age
+        self.address=address
+    def update_name(self,n_name):
+        self.name=n_name
+    def update_age(self,n_age):
+        self.age=n_age
+    def update_address(self,n_address):
+        self.address=n_address
+    def display_details(self):
+        print('Name : ',self.name)
+        print('Age : ',self.age)
+        print('Address : ',self.address)
+
+name=input('Enter Name : ')
+age=int(input('Enter Age : '))
+address=input('Enter Address : ')
+print('\n')
+
+p=person(name,age,address)
+
+p.display_details()
+print('\n')
+
+x=input('Do yo need to update data y/n : ')
+print('\n')
+
+if x=='y':
+    print('1. Update Name')
+    print('2. Update Age')
+    print('3. Update Address')
+    z=int(input("Enter choice : "))
+
+    if z==1:
+        n=input('enter new name : ')
+        p.update_name(n)
+    elif z==2:
+        a=int(input('enter new age : '))
+        p.update_age(a)
+    elif z==3:
+        addr=input('enter new address : ')
+        p.update_address(addr)
+    else:
+        print('Invalid option')
+    
+    print('\n')
+    
+    print('Data after updation')
+    
+    p.display_details()
+else:
+    print('ok for no update needed')
